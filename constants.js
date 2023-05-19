@@ -1,5 +1,4 @@
 export const data = [
-  // 1
   {
     id: 1,
     sender: 'Hepsiburada',
@@ -8,7 +7,6 @@ export const data = [
     message: 'Verdiğiniz sipariş adresinize teslim edilmiştir',
     date: '10 Mayıs',
   },
-  // 2
   {
     id: 2,
     sender: 'Gmail',
@@ -17,7 +15,6 @@ export const data = [
     message: 'Önemli bir konu hakkında sizinle iletişime geçmek istiyoruz',
     date: '11 Mayıs',
   },
-  //  3
   {
     id: 3,
     sender: 'Facebook',
@@ -27,7 +24,6 @@ export const data = [
       'Birisi size arkadaşlık isteği gönderdi. Kabul etmek isterseniz profiline giderek isteği onaylayabilirsiniz',
     date: '12 Mayıs',
   },
-  // 4
   {
     id: 4,
     sender: 'Amazon',
@@ -37,7 +33,6 @@ export const data = [
       'Prime üyeliğinizin yenileme tarihi yaklaşıyor. Son gün kaçırılmayacak fırsatları yakalamak için üyeliğinizi yenileyebilirsiniz.',
     date: '13 Mayıs',
   },
-  // 5
   {
     id: 5,
     sender: 'LinkedIn',
@@ -47,7 +42,6 @@ export const data = [
       'Bir LinkedIn bağlantınız size mesaj gönderdi. Gelen kutunuzu kontrol etmeyi unutmayın.',
     date: '14 Mayıs',
   },
-  // 6
   {
     id: 6,
     sender: 'Twitter',
@@ -57,7 +51,6 @@ export const data = [
       'Takip ettiğiniz bir kişi yeni bir tweet paylaştı. Merak ettiğiniz konular hakkında güncel bilgilere ulaşabilirsiniz.',
     date: '15 Mayıs',
   },
-  // 7
   {
     id: 7,
     sender: 'Netflix',
@@ -66,7 +59,6 @@ export const data = [
     message: 'Favori dizinizin yeni sezonu yayınlandı! Hemen izlemeye başlayabilirsiniz.',
     date: '16 Mayıs',
   },
-  // 8
   {
     id: 8,
     sender: 'Bank',
@@ -76,7 +68,6 @@ export const data = [
       'Hesabınızdaki bakiye güncellendi. Son işlemleri kontrol etmek ve hesabınızla ilgili önemli bilgileri görmek için hesap panelinizi ziyaret edin.',
     date: '17 Mayıs',
   },
-  // 9
   {
     id: 9,
     sender: 'Instagram',
@@ -86,7 +77,6 @@ export const data = [
       'Yeni biri sizi takip etmeye başladı. Profilinizi ziyaret ederek bu kişiyle iletişim kurabilirsiniz.',
     date: '18 Mayıs',
   },
-  // 10
   {
     id: 10,
     sender: 'Spotify',
@@ -96,7 +86,6 @@ export const data = [
       'Spotify Premium üyeliği için size özel bir teklifimiz var. Sınırsız müzik keyfi için hemen üyeliğinizi güncelleyin.',
     date: '19 Mayıs',
   },
-  // 11
   {
     id: 11,
     sender: 'DHL',
@@ -106,7 +95,6 @@ export const data = [
       'Kargonuz yola çıktı ve yakında teslim edilecek. Siparişinizi takip etmek için kargo takip numarasını kullanabilirsiniz.',
     date: '20 Mayıs',
   },
-  // 12
   {
     id: 12,
     sender: 'Airbnb',

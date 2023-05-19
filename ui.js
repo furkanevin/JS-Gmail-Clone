@@ -1,5 +1,6 @@
 // ekrana mailleri basma
 export function renderMails(messages, data) {
+  if (!data) return;
   messages.innerHTML = data
     .map(
       (d) => `
@@ -15,7 +16,12 @@ export function renderMails(messages, data) {
     <div class="mail-title">${d.title}</div>
     <div class="mail-content">${d.message}</div>
     <div class="mail-date">${d.date}</div>
+    <div class="mail-buttons">
+      <p data-id="${d.id}" id="buttons-del" >Sil</p>
+    </div>
   </div>
+  
+
 </div>`
     )
     .join(' ');

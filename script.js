@@ -1,7 +1,11 @@
 // importlar
-import { data } from './constants.js';
+// import { data } from './constants.js';
 import { renderMails } from './ui.js';
 import { showCreateMailModal } from './ui.js';
+
+// localstoregedan veri alma
+const localData = localStorage.getItem('localData');
+const data = JSON.parse(localData) || [];
 
 // htmlden gelenler
 const messages = document.querySelector('.messages_area');
@@ -18,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => renderMails(messages, data))
 createMailBtn.addEventListener('click', () => showCreateMailModal(modal, true));
 closeModalBtn.addEventListener('click', () => showCreateMailModal(modal, false));
 sendMailBtn.addEventListener('click', () => sendMail());
+messages.addEventListener('click', deleteMail);
 
 // form işlemleri
 function sendMail() {
@@ -45,8 +50,9 @@ function sendMail() {
   }
 
   // eğerki inputlar doluysa
+
   const newMail = {
-    id: data.length + 1,
+    id: data ? data.length + 1 : 1,
     sender: 'Furkan',
     reciever: recieverValue,
     title: titleValue,
@@ -54,9 +60,31 @@ function sendMail() {
     date: '10 May',
   };
 
+  console.log(data);
   data.unshift(newMail);
+
+  // veriyi güncelle
+  const strData = JSON.stringify(data);
+  localStorage.setItem('localData', strData);
+
+  // ekranı güncelle
 
   renderMails(messages, data);
 
   showCreateMailModal(modal, false);
+}
+
+// mail silme
+function deleteMail(e) {
+  if (e.target.id !== 'buttons-del') return;
+
+  // önce diziden silicez
+  const deletingId = e.target.dataset.id;
+  const filtred = data.filter((mail) => mail.id != deletingId);
+  const strFiltred = JSON.stringify(filtred);
+  localStorage.setItem('localData', strFiltred);
+
+  // sonra ekrandan silicez
+  const deletingMail = e.target.parentElement.parentElement.parentElement;
+  deletingMail.remove();
 }

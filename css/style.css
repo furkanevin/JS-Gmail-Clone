@@ -328,6 +328,7 @@ ul li:last-child {
   color: var(--dark-gray);
   display: grid;
   grid-template-columns: 1fr 5fr;
+  position: relative;
 }
 
 .mail:hover {
@@ -359,6 +360,25 @@ ul li:last-child {
 
 .mail-left ion-icon:hover {
   color: #000;
+}
+
+.mail-buttons {
+  display: none;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  color: black;
+  background-color: #e9ecef;
+}
+.mail:hover > .mail-right .mail-buttons {
+  display: flex;
+  justify-content: center;
+}
+#buttons-del:hover {
+  background-color: #464f58;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /* yan ikonlar */
